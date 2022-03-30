@@ -10,10 +10,10 @@ export default (io) => {
         }
         emitNotes()
 
-        socket.on('newnote',async (data) => {
+        socket.on('newnote', async (data) => {
             const newNote= new Note(data);
-            const saveNote = await newNote.save()
-            console.log(saveNote);
+            const savedNote = await newNote.save()
+            console.log(savedNote);
             // ({
             //     title: data.title,
             //     description: data.description  --ESTA ES UNA FORMA DE PASAR LOS DATOS MÁS ESPECÍFICOS--
